@@ -1,4 +1,4 @@
-public class MiIndormacion {
+public class MiInformacion {
     public static void main(String[] args){
         System.out.println("Hola, mi nombre es Karla Jiménez");
         System.out.println("Tengo 25 años de edad");
