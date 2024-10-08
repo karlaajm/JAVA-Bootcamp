@@ -27,8 +27,8 @@ public class Cajero {
     }
 
     public static String totalDeBilletesYMonedas(int montoDesignado) {
-        int Billetes[] = {500, 200, 100, 50, 20};
-        int Monedas[] = {10, 5, 2, 1};
+        int[] Billetes = {500, 200, 100, 50, 20};
+        int[] Monedas = {10, 5, 2, 1};
         String msg = "";
 
         /*
