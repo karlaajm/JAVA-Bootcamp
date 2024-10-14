@@ -1,7 +1,9 @@
 import clases.Cajero;
+import clases.AdivinaNumero;
+import java.lang.Math;
 
 public class Aplicacion {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         //Primera clase estática
         double valorDinero = 7660;
         String valor = Cajero.retirarDinero(valorDinero);
@@ -28,6 +30,21 @@ public class Aplicacion {
         int totalDeBilletes = 1999;
         String mensaje2 = Cajero.totalDeBilletesYMonedas(totalDeBilletes);
         System.out.println(mensaje2);
+
+        //Adivina Número (Actividad Práctica)
+        int minimo = 1;
+        int maximo = 100;
+        int aleatorio = minimo + (int)(Math.random() * (maximo - minimo));
+        System.out.println("Número aleatorio entero entre " + minimo + " y " + maximo + ": " + aleatorio);
+        String mensajes = "";
+
+        do {
+            System.out.print("Por favor ingresa un número entre 1 - 100: ");
+            String linea = System.console().readLine();
+            int num = Integer.parseInt(linea);
+            mensajes = AdivinaNumero.compararNumeros(num, aleatorio);
+            System.out.println(mensajes);
+        } while(mensajes.contains("Intenta"));
     }
 }
 
