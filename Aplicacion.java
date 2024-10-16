@@ -1,6 +1,8 @@
 import clases.Cajero;
 import clases.AdivinaNumero;
 import java.lang.Math;
+import java.util.HashMap;
+import java.util.Set;
 
 public class Aplicacion {
     public static void main(String[] args) {
@@ -45,6 +47,20 @@ public class Aplicacion {
             mensajes = AdivinaNumero.compararNumeros(num, aleatorio);
             System.out.println(mensajes);
         } while(mensajes.contains("Intenta"));
+
+
+        HashMap <String, Integer> Frutas = new HashMap<String, Integer>();
+
+        Frutas.put("Manzana", 20);
+        Frutas.put("Pera", 3);
+        Frutas.put("Plátano", 6);
+        Frutas.put("Damazco", 4);
+        Frutas.put("Tomate", 5);
+
+        Set<String> propiedades = Frutas.keySet();
+        for(String clave : propiedades) {
+            System.out.println(clave+" - "+ Frutas.get(clave));
+        }
     }
 }
 
